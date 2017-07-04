@@ -152,7 +152,7 @@ function MarkerClusterer(map, opt_markers, opt_options) {
     this.averageCenter_ = options['averageCenter'];
   }
 
-  this.setupStyles_();
+  this.setupStyles();
 
   this.setMap(map);
 
@@ -305,7 +305,6 @@ MarkerClusterer.prototype.isAverageCenter = function() {
   return this.averageCenter_;
 };
 
-
 /**
  *  Returns the array of markers in the clusterer.
  *
@@ -315,7 +314,6 @@ MarkerClusterer.prototype.getMarkers = function() {
   return this.markers_;
 };
 
-
 /**
  *  Returns the number of markers in the clusterer
  *
@@ -324,7 +322,6 @@ MarkerClusterer.prototype.getMarkers = function() {
 MarkerClusterer.prototype.getTotalMarkers = function() {
   return this.markers_.length;
 };
-
 
 /**
  *  Sets the max zoom for the clusterer.
@@ -402,7 +399,7 @@ MarkerClusterer.prototype.getCalculator = function() {
  */
 MarkerClusterer.prototype.addMarkers = function(markers, opt_nodraw) {
   for (var i = 0, marker; marker = markers[i]; i++) {
-    this.pushMarkerTo_(marker);
+    this.pushMarkerTo(marker);
   }
   if (!opt_nodraw) {
     this.redraw();
@@ -438,7 +435,7 @@ MarkerClusterer.prototype.pushMarkerTo_ = function(marker) {
  * @param {boolean=} opt_nodraw Whether to redraw the clusters.
  */
 MarkerClusterer.prototype.addMarker = function(marker, opt_nodraw) {
-  this.pushMarkerTo_(marker);
+  this.pushMarkerTo(marker);
   if (!opt_nodraw) {
     this.redraw();
   }

@@ -2,7 +2,7 @@
   "name": "js-marker-clusterer",
   "version": "1.0.0",
   "description": "The library creates and manages per-zoom-level clusters for large amounts of markers. Google API v3.",
-  "main": "src/markerclusterer.js",
+  "main": "dist/es6/markerclusterer.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
@@ -26,5 +26,19 @@
   "bugs": {
     "url": "https://github.com/googlemaps/js-marker-clusterer/issues"
   },
-  "homepage": "https://github.com/googlemaps/js-marker-clusterer#readme"
+  "scripts": {
+    "build": "npm run build:es5",
+    "build:es5": "npm run clean:es5 && tsc -p . -t ES5 --outdir dist/es5 -d",
+    "build:es6": "npm run clean:es6 && tsc -p . -t ES6 --outdir dist/es6 -d",
+    "clean:es5": "rimraf dist/es5",
+    "clean:es6": "rimraf dist/es6"
+  },
+  "homepage": "https://github.com/googlemaps/js-marker-clusterer#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/google-maps": "^3.2.0",
+    "@types/node": "^8.0.5",
+    "rimraf": "^2.6.1",
+    "typescript": "^2.4.1"
+  }
 }

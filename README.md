@@ -12,7 +12,7 @@ Migrated from the [Google Maps JavaScript API utility libraries on Google Code](
 
 ## Usage
 
-Download or clone `markerclusterer.js` and images `m1.png` to `m5.png`, save images in `images` folder.
+Download or clone `markerclusterer2.js` and images `m1.png` to `m5.png`, save images in `images` folder.
 
 To use your own custom cluster images just name your images `m[1-5].png` or set the `imagePath` option to the location and name of your images like this: `imagePath: 'customImages/cat'` for images `cat1.png` to `cat5.png`.
 
@@ -21,7 +21,7 @@ index.html
     ...
 
     <div id="map-container"><div id="map"></div></div>
-    <script src="markerclusterer.js"></script>
+    <script src="markerclusterer2.js"></script>
     <script>
         function initialize() {
             var center = new google.maps.LatLng(51.5074, 0.1278);
